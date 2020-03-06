@@ -15,14 +15,14 @@ const EditExpensePage = (props) => {
       onSubmit = {(expense) => {
         props.dispatch(editExpense(props.expense.id, expense))
         props.history.push('/')
-        console.log("updated", expense)
+        console.log("atualizada", expense)
       }}
       
       />
       <button onClick={() =>{
         props.dispatch(removeExpense({id:props.expense.id}))
         props.history.push('/')
-        }}>Remove</button>
+        }}>Remover</button>
             
     </div>
   );
