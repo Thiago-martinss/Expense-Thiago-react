@@ -1,6 +1,6 @@
 import moment from 'moment';
-import selectExpenses from '../../selectors/expenses'
-import expenses from '../fixture/expenses'
+import selectExpenses from '../../selectors/expenses';
+import expenses from '../fixtures/expenses';
 
 test('should filter by text value', () => {
   const filters = {
@@ -24,7 +24,7 @@ test('should filter by startDate', () => {
   expect(result).toEqual([expenses[2], expenses[0]]);
 });
 
-test('should filter by endDate ', () => {
+test('should filter by endDate', () => {
   const filters = {
     text: '',
     sortBy: 'date',
