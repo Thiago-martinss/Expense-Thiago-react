@@ -16,7 +16,13 @@ exports[`should render Header correctly 1`] = `
     activeClassName="is-active"
     to="/create"
   >
-    Create Expense
+    Criar despesa
+  </NavLink>
+  <NavLink
+    activeClassName="is-active"
+    to="/help"
+  >
+    Ajuda
   </NavLink>
 </header>
 `;

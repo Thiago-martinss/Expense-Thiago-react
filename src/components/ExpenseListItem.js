@@ -11,8 +11,6 @@ import numeral from 'numeral'
 
 const ExpenseListItem = ({ id, description, amount, createdAt}) => (
     <div>
-    {moment.locale('pt-br')}
-
         <Link to={`/edit/${id}`}>
         <h3>{description}</h3>
         </Link>
