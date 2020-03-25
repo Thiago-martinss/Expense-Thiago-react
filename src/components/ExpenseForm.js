@@ -47,8 +47,8 @@ export default class ExpenseForm extends React.Component {
     onSubmit = (e) => {
         e.preventDefault()
 
-        if (!this.state.description || !this.state.amount) {
-            this.setState(() => ({error:'Por favor escreva uma descrição e  quantia'}))
+        if (!this.state.description || !this.state.amount || !this.state.note) {
+            this.setState(() => ({error:'Por favor preencha todos os campos'}))
         } else  {
             this.setState(() => ({error:''}))
             this.props.onSubmit({
@@ -96,7 +96,7 @@ export default class ExpenseForm extends React.Component {
             value = {this.state.note}
             className="textarea"
             onChange={this.onNoteChange}
-            placeholder = "Adicione uma descrição para a sua despesa (opcional)"
+            placeholder = "Adicione uma descrição para a sua despesa"
             >
            
             </textarea>
